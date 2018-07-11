@@ -20,6 +20,9 @@
         <activity android:name=".basic.ui.ObservableFieldActivity"/>
 
         <activity android:name=".basic.ui.ViewModelActivity"/>
+
+        <activity android:name=".java.ui.ObservableFieldActivity"/>
+        <activity android:name=".java.ui.ViewModelActivity"/>
     </application>
 
 </manifest>

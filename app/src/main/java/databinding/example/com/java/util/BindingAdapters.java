@@ -38,13 +38,14 @@ public class BindingAdapters {
 
     @BindingAdapter(value = {"app:progressScaledjava", "android:maxjava"}, requireAll = true)
     public static void setProgress(ProgressBar progressBar, int likes, int max) {
-        progressBar.setProgress((likes > max) ? max : likes);
+        int count = likes * max / 5;
+        progressBar.setProgress((count > max) ? max : count);
         //progressBar.setProgress((likes * max / 5).coerceAtMost(max));
     }
 
     @BindingAdapter("app:hideIfZerojava")
     public static void hideIfZero(View view, int number) {
-        view.setVisibility(number == 0?View.GONE:View.VISIBLE);
+        view.setVisibility(number == 0 ? View.GONE : View.VISIBLE);
     }
 
     private static int getAssociatedColor(Popularity popularity, Context context) {

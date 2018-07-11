@@ -12,7 +12,7 @@ import databinding.example.com.databinding.JavaObservableFieldProfileBinding;
 import databinding.example.com.java.data.ObservableFieldProfile;
 
 public class ObservableFieldActivity extends AppCompatActivity {
-    private ObservableFieldProfile observableFieldProfile = new ObservableFieldProfile("Ada11", "Lovelace", new ObservableInt(0));
+    private ObservableFieldProfile observableFieldProfile = new ObservableFieldProfile("java over", "hi", new ObservableInt(0));
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

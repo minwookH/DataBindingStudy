@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel
 import android.databinding.Bindable
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
+import databinding.example.com.BR
 import databinding.example.com.basic.util.ObservableViewModel
 
 class ProfileObservableViewModel : ObservableViewModel() {
@@ -13,21 +14,11 @@ class ProfileObservableViewModel : ObservableViewModel() {
 
     fun onLike() {
         likes.increment()
+        notifyPropertyChanged(BR.popularity)
     }
 
     @Bindable
     fun getPopularity(): Popularity {
-        return likes.get().let {
-            when {
-                it > 9 -> Popularity.STAR
-                it > 4 -> Popularity.POPULAR
-                else -> Popularity.NORMAL
-            }
-        }
-    }
-
-    @Bindable
-    fun getPopularit(): Popularity {
         return likes.get().let {
             when {
                 it > 9 -> Popularity.STAR

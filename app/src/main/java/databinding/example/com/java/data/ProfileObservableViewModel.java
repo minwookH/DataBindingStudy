@@ -4,6 +4,7 @@ import android.databinding.Bindable;
 import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 
+import databinding.example.com.BR;
 import databinding.example.com.java.util.ObservableViewModel;
 
 public class ProfileObservableViewModel extends ObservableViewModel {
@@ -12,12 +13,13 @@ public class ProfileObservableViewModel extends ObservableViewModel {
         likes.set(likes.get()+1);
     }
 
-    public ObservableField name = new ObservableField("Ada333");
-    public ObservableField lastName = new ObservableField("Lovelace");
+    public ObservableField name = new ObservableField("java");
+    public ObservableField lastName = new ObservableField("viewmodel");
     public ObservableInt likes = new ObservableInt(0);
 
     public void onLike() {
         increment();
+        notifyPropertyChanged(BR.popularity);
     }
 
     @Bindable

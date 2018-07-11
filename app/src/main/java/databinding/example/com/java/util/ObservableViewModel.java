@@ -5,13 +5,13 @@ import android.databinding.Observable;
 import android.databinding.PropertyChangeRegistry;
 
 public class ObservableViewModel extends ViewModel implements Observable {
-    private PropertyChangeRegistry callbacks = new PropertyChangeRegistry();
+    public PropertyChangeRegistry callbacks = new PropertyChangeRegistry();
 
-    private void notifyChange() {
+    public void notifyChange() {
         callbacks.notifyCallbacks(this, 0, null);
     }
 
-    private void notifyPropertyChanged(int fieldId) {
+    public void notifyPropertyChanged(int fieldId) {
         callbacks.notifyCallbacks(this, fieldId, null);
     }
 

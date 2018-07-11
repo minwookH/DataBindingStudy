@@ -19,11 +19,16 @@ class MainActivity : AppCompatActivity() {
 
         // The returned binding has references to all the Views with an ID.
         binding.observableFieldsActivityButton.setOnClickListener {
-            //startActivity(Intent(this, ObservableFieldActivity::class.java))
-            startActivity(Intent(this, databinding.example.com.java.ui.ObservableFieldActivity::class.java))
+            startActivity(Intent(this, ObservableFieldActivity::class.java))
         }
         binding.viewmodelActivityButton.setOnClickListener {
-            //startActivity(Intent(this, ViewModelActivity::class.java))
+            startActivity(Intent(this, ViewModelActivity::class.java))
+        }
+
+        binding.javaObservableFieldsActivityButton.setOnClickListener{
+            startActivity(Intent(this, databinding.example.com.java.ui.ObservableFieldActivity::class.java))
+        }
+        binding.javaViewmodelActivityButton.setOnClickListener {
             startActivity(Intent(this, databinding.example.com.java.ui.ViewModelActivity::class.java))
         }
     }

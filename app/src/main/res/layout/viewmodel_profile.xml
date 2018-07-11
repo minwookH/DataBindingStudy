@@ -126,7 +126,7 @@
             android:layout_marginTop="8dp"
             android:max="@{100}"
             app:hideIfZero="@{viewmodel.likes}"
-            app:progressTint="@{viewmodel.popularit}"
+            app:progressTint="@{viewmodel.popularity}"
             app:progressScaled="@{viewmodel.likes}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/like_button"
